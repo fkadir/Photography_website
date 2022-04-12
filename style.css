@@ -1,0 +1,29 @@
+/* Mobile first */
+.grid-container {display: flex; flex-direction: column;}
+
+body {margin: 2% 5% 0 5%}
+header {background-color: yellow; font-family: Baskerville;}
+nav {background-color: red;}
+h1 {text-decoration-color: pink;}
+
+.IMAGES img {max-width: 100%; background-size: contain; width: auto; height: auto; object-fit: fill; padding: 2% 0;}
+
+#col1 {background-color: pink;}
+#col2 {background-color: blue;}
+#col3 {background-color: green;}
+
+@media (min-width: ?) {
+.grid-container {
+  display: grid;
+  grid-template-columns: 15% 1fr 1fr;
+  grid-template-rows: auto;
+}
+
+@media (min-width: ?) {
+.grid-container {
+  display: grid;
+  grid-template-columns: 20% 1fr 1fr 1fr;
+  grid-template-rows: auto;
+}
+
+}
