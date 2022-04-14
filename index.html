@@ -4,6 +4,7 @@
       <title>Photos by Fenna</title>
       <meta charset="UTF-8">
       <link href="style.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <style media="screen">
 
       </style>
@@ -11,25 +12,46 @@
 
   <body>
     <div class="grid-container">
+    <!-- <div class="mobile-container"> -->
+
+      <div class="topnav">
       <header>
-        <h1> Photos by Fenna </h1>
+        <a href="#home" class="active"> Photos by Fenna </a>
       </header>
-      <nav>
-        <ul>
-          <li>portofolio</li>
-          <li>about & contact</li>
-          </ul>
+      <nav id="myLinks">
+          <a href="#portofolio">Portofolio</a>
+          <a href="#about">About & Contact</a>
+          <a href="https://www.instagram.com/photos.by.fenna/" target="_blank" rel="noreferrer noopener"><img src="C:\Users\fenna\OneDrive\Documents\TUD\CMPU4063\A_Design\prototype\insta.png"></a>
       </nav>
-      <div class="IMAGES" id="col1">
-        <img src="C:\Users\fenna\OneDrive\Documents\TUD\CMPU4063\A_Design\prototype\im1.jpg" alt="TBD">
+      <a href="javascript:void(0);" class="icon" onclick="menuFunction()">
+        <i class="fa fa-bars"></i>
       </div>
-      <div class="IMAGES" id="col2">
+
+
+      <div class="IMAGES" id="pic1">
+        <img src="C:\Users\fenna\OneDrive\Documents\TUD\CMPU4063\A_Design\prototype\im1.jpg" alt="">
+      </div>
+      <div class="IMAGES" id="pic2">
         <img src="C:\Users\fenna\OneDrive\Documents\TUD\CMPU4063\A_Design\prototype\im2.jpg" alt="">
       </div>
-      <div class="IMAGES" id="col3">
+      <div class="IMAGES" id="pic3">
         <img src="C:\Users\fenna\OneDrive\Documents\TUD\CMPU4063\A_Design\prototype\im3.jpg" alt="">
       </div>
+
+    <!-- </div> -->
     </div>
+
+    <script>
+    function menuFunction() {
+      var x = document.getElementById("myLinks");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+    </script>
+
   </body>
 
 </html>

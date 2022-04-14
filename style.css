@@ -1,22 +1,42 @@
 /* Mobile first */
 .grid-container {display: flex; flex-direction: column;}
 
+
+.mobile-container {
+  max-width: 480px;
+  margin: auto;
+  background-color: #555;
+  height: 500px;
+  color: white;
+  border-radius: 10px;
+}
+
 body {margin: 2% 5% 0 5%}
-header {background-color: yellow; font-family: Baskerville,Baskerville Old Face,Hoefler Text,Garamond,Times New Roman,serif;}
-nav {background-color: red;}
-h1 {text-decoration-color: pink;}
+header {font-family: Baskerville,Baskerville Old Face,Hoefler Text,Garamond,Times New Roman,serif;}
 
 .IMAGES img {max-width: 100%; background-size: contain; width: auto; height: auto; object-fit: fill; padding: 2% 0;}
 
-#col1 {background-color: pink;}
-#col2 {background-color: blue;}
-#col3 {background-color: green;}
+.topnav {background-color: white; overflow: hidden; position: relative;}
+.topnav header {font-size: 175%}
+.topnav #myLinks {display: none; font-size: 100%;}
+.topnav a {color: black; padding: 14px 16px; text-decoration: none; display: block;}
+.topnav a.icon {background: white; display: block; position: absolute; right: 0; top: 0;}
+#myLinks img {width: 5%; height: auto;}
+.active {background-color: white;}
 
-@media (min-width: ?) {
+#pic1 {background-color: pink;}
+#pic2 {background-color: blue;}
+#pic3 {background-color: green;}
+
+
+/* future media queries */
+/*
+@media (min-width: 768px) {
 .grid-container {
   display: grid;
-  grid-template-columns: 15% 1fr 1fr;
-  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 5% repeat(3, 1fr);
+}
 }
 
 @media (min-width: ?) {
@@ -27,3 +47,4 @@ h1 {text-decoration-color: pink;}
 }
 
 }
+*/
