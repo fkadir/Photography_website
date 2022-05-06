@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Photos by Fenna</title>
+      <meta charset="UTF-8">
+      <link href="style.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <style media="screen">
+
+      </style>
+  </head>
+  <body id="nomargin">
+  <div id="aboutcontact">
+    <!-- <div class="mobile-container"> -->
+
+      <div class="topnav">
+      <header>
+        <a href="C:/Users/fenna/OneDrive/Documents/TUD/CMPU4063/A_implementation/index.html" class="active"> Photos by Fenna </a>
+      </header>
+      <nav id="myLinks">
+          <a href="C:/Users/fenna/OneDrive/Documents/TUD/CMPU4063/A_implementation/contact.html">About & Contact</a>
+          <a href="https://www.instagram.com/photos.by.fenna/" target="_blank" rel="noreferrer noopener"><img src="C:\Users\fenna\OneDrive\Documents\TUD\CMPU4063\A_Design\prototype\insta.png"></a>
+      </nav>
+      <a href="javascript:void(0);" class="icon" onclick="menuFunction()">
+        <i class="fa fa-bars"></i></a>
+      </div>
+
+      <div class="about-grid">
+        <div class="about">
+          <h2> About </h2>
+          <img src="C:\Users\fenna\OneDrive\Documents\TUD\CMPU4063\A_implementation\Pictures\about.JPG" alt="">
+          <p> bla bla bla </p>
+        </div>
+        <div class="contact">
+          <h2> Contact </h2>
+          <form name="contactform" action="mailto:fennakadir@gmail.com" method="post">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name..">
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your email..">
+
+            <label for="phone">Phone Number</label>
+            <input type="text" id="phone" name="phone" placeholder="Your phone number..">
+
+            <label for="date">Date Desired </label>
+            <input type="text" id="date" name="date" placeholder="Your desired date..">
+
+            <label for="location">Location or Venue Desired </label>
+            <input type="text" id="location" name="location" placeholder="Your desired location or venue..">
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Your message.."></textarea>
+
+            <input type="submit" value="Submit">
+          </form>
+        </div>
+    <!-- </div> -->
+      </div>
+
+    <script>
+    function menuFunction() {
+      var x = document.getElementById("myLinks");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+    </script>
+    </div>
+  </body>
+
+</html>

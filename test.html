@@ -3,63 +3,32 @@
   <head>
       <title>Photos by Fenna</title>
       <meta charset="UTF-8">
+      <link href="test.css" rel="stylesheet">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-      <style>
-          .grid-container {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: 5% repeat(2, 1fr);
-          }
+      <style media="screen">
 
-          .topnav {
-            width: 100%; height: 100%;
-            background-color: pink;
-            grid-row: 1;
-            grid-column: 1 / span 2;
-          }
-
-          .IMAGES {
-            width: 100%; height: 100%;
-            background-color: grey;
-          }
-
-          .pic1 {
-            width: 100%; height: 100%;
-            background-color: blue;
-            grid-row: 2;
-            grid-column: 1;
-          }
-
-          .pic2 {
-            width: 100%; height: 100%;
-            background-color: purple;
-            grid-row: 2;
-            grid-column: 2;
-          }
       </style>
   </head>
 
   <body>
-    <div class=grid-container>
 
-      <div class="topnav">  <h1> hello hello </h1>    </div>
-      <div class="IMAGES">
-          <div class="pic1">  <h1> hello hello </h1>        </div>
-          <div class="pic2">  <h1> hello hello </h1>         </div>
-      </div>
+    <nav>
+        <div class="container nav-container">
+          <div class="logo">
+            <h1>Navbar</h1>
+          </div>
+            <input class="checkbox" type="checkbox" name="" id="" />
+            <div class="hamburger-lines">
+              <span class="line line1"></span>
+              <span class="line line2"></span>
+              <span class="line line3"></span>
+            </div>
+          <div class="menu-items">
+            <li><a href="C:/Users/fenna/OneDrive/Documents/TUD/CMPU4063/A_implementation/contact.html">About & Contact</a></li>
+            <li><a href="https://www.instagram.com/photos.by.fenna/" target="_blank" rel="noreferrer noopener"><img src="C:\Users\fenna\OneDrive\Documents\TUD\CMPU4063\A_Design\prototype\insta.png"></a></li>
+          </div>
+        </div>
+    </nav>
 
-      </div>
-    <script>
-  function menuFunction() {
-    var x = document.getElementById("myLinks");
-    if (x.style.display === "block") {
-      x.style.display = "none";
-    } else {
-      x.style.display = "block";
-    }
-  }
-  </script>
-
-</body>
-
+  </body>
 </html>

@@ -1,6 +1,7 @@
 /* Mobile first */
 .grid-container {display: flex; flex-direction: column;}
 
+.about-grid {display: flex; flex-direction: column; text-decoration-color: black;}
 
 .mobile-container {
   max-width: 480px;
@@ -11,8 +12,10 @@
   border-radius: 10px;
 }
 
-body {margin: 2% 5% 0 5%}
-header {font-family: Baskerville,Baskerville Old Face,Hoefler Text,Garamond,Times New Roman,serif;}
+#index body {margin: 2% 5% 0 5%}
+#aboutcontact {margin: 0; padding: 0%;}
+#nomargin {margin:0;}
+header, body, input, textarea{font-family: Baskerville,Baskerville Old Face,Hoefler Text,Garamond,Times New Roman,serif;}
 
 .IMAGES img {max-width: 100%; background-size: contain; width: auto; height: auto; object-fit: fill; padding: 2% 0;}
 
@@ -24,27 +27,64 @@ header {font-family: Baskerville,Baskerville Old Face,Hoefler Text,Garamond,Time
 #myLinks img {width: 5%; height: auto;}
 .active {background-color: white;}
 
-#pic1 {background-color: pink;}
-#pic2 {background-color: blue;}
-#pic3 {background-color: green;}
+#aboutcontact h2 {text-align: center; margin: 1% auto;}
 
+.about {background: rgba(206, 199, 191, 0.25);}
+.about img {max-width: 100%; width: 95%; height: 95%;background-size: contain; object-fit: fill; padding: 2%;}
 
-/* future media queries */
-/*
-@media (min-width: 768px) {
+.contact {padding: 2%;}
+/*https://www.w3schools.com/css/css_form.asp, https://www.w3schools.com/css/tryit.asp?filename=trycss_forms*/
+.contact input[type=text], input[type=email], select, textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: rgba(206, 199, 191, 0.25);
+}
+
+.contact textarea {height: 150px;}
+
+.contact input[type=submit] {
+  width: 25%;
+  background-color: #CEC7BF;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact input[type=submit]:hover {
+  background-color: #aca092;
+}
+
+/* media queries */
+@media (min-width: 400px) {
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 5% repeat(3, 1fr);
-}
+  grid-template-rows: repeat(3, auto);
 }
 
-@media (min-width: ?) {
+.IMAGES {height: min-content; padding: 2%;}
+
+.about {display: inline;}
+.about img {width: 45%; height: 45%; float: left;}
+.about p {margin: 0; padding: 2% 0;}
+
+}
+
+@media (min-width: 780px) {
 .grid-container {
   display: grid;
   grid-template-columns: 20% 1fr 1fr 1fr;
   grid-template-rows: auto;
 }
 
+.about img {width: 30%; height: 30%;}
+
 }
-*/
