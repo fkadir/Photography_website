@@ -23,7 +23,10 @@ nav img {width: 10%; height: auto;}
 
 /*https://alvarotrigo.com/blog/hamburger-menu-css/, https://codepen.io/alvarotrigo/pen/wvrzPWL */
 nav {
+  background-color: white;
   width: 100%;
+  position: sticky;
+  top: 0;
 }
 
 .container {
@@ -177,12 +180,58 @@ nav .menu-items li {
   background-color: #aca092;
 }
 
+#popup-image {
+    width: 100%;
+    height: auto;
+    max-height: 50%;
+    padding-bottom: 1%;
+}
+
+/*https://www.w3schools.com/howto/howto_css_modals.asp, https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal*/
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding: 9% 0; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100% /* Full height */
+  overflow: scroll;
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0.5% 2% 2% 2%;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 /* media queries */
 @media (min-width: 400px) {
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(9, 5%);}
+  grid-template-rows: repeat(10, 120px) 10px;}
 
 .IMAGES img {object-fit: contain; padding: 2% 0;}
 .IMAGES {height: auto; overflow: hidden;}
@@ -194,13 +243,14 @@ nav .menu-items li {
 nav .menu-items {
   width: 50%;
   max-width: 400px;}
+
 }
 
 @media (min-width: 780px) {
 .grid-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(5, 8%);
+  grid-template-rows: repeat(5, 115px);
 }
 
 .about img {width: 30%; height: 30%;}
