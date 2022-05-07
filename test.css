@@ -1,25 +1,55 @@
-/* https://alvarotrigo.com/blog/hamburger-menu-css/, https://codepen.io/alvarotrigo/pen/wvrzPWL */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* Mobile first */
+.grid-container {display: flex; flex-direction: column;}
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.about-grid {display: flex; flex-direction: column; text-decoration-color: black;}
+
+#index {margin: 2% 5% 0 5%}
+#aboutcontact {margin: 0;}
+header, body, input, textarea{font-family: Baskerville,Baskerville Old Face,Hoefler Text,Garamond,Times New Roman,serif;}
+
+.IMAGES img {
+  max-width: 100%;
+  background-size: contain;
+  width: auto;
+  height: auto;
+  opacity: 1;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
 }
 
-body {
-  font-family: "Poppins", sans-serif;
+.IMAGES {position: relative; padding: 2% 2%;}
+
+/* https://www.w3schools.com/css/css3_images.asp, https://www.w3schools.com/css/tryit.asp?filename=trycss_css_image_overlay_opacity*/
+.middle {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
 }
+
+.IMAGES:hover img {
+  opacity: 0.5;
+}
+
+.IMAGES:hover .middle {
+  opacity: 1;
+}
+
+.nav-container header {font-size: 2%;}
+nav a {color: black; text-decoration: none; display: block;}
+nav img {width: 10%; height: auto;}
 
 .container {
   max-width: 1050px;
   width: 90%;
-  margin: auto;
+  margin: 1%;
 }
 
 nav {
   width: 100%;
-  box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
 }
 
 .nav-container {
@@ -50,32 +80,32 @@ nav .nav-container a {
 .nav-container .checkbox {
   position: fixed;
   display: block;
-  height: 32px;
+  height: 30px;
   width: 32px;
   top: 17px;
   right: 20px;
   z-index: 5;
   opacity: 0;
   cursor: pointer;
+  margin: 0;
 }
 
 .nav-container .hamburger-lines {
   display: block;
-  height: 26px;
+  height: 24px;
   width: 32px;
   position: fixed;
-  top: 17px;
+  top: 20px;
   right: 20px;
   z-index: 2;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
 }
 
 .nav-container .hamburger-lines .line {
   display: block;
-  height: 4px;
+  height: 2px;
   width: 100%;
   border-radius: 10px;
   background: #0e2431;
@@ -95,26 +125,11 @@ nav .nav-container a {
   transition: transform 0.4s ease-in-out;
 }
 
-/*the slide in menu!
 nav .menu-items {
   padding-top: 15%;
   box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
   height: 100vh;
   width: 100%;
-  transform: translate(-150%);
-  display: flex;
-  flex-direction: column;
-  margin-right: -40px;
-  padding-right: 50px;
-  transition: transform 0.5s ease-in-out;
-  background-color: pink;
-}*/
-
-nav .menu-items {
-  padding-top: 15%;
-  box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
-  height: 100vh;
-  width: 50%;
   transform: translate(150%);
   display: flex;
   flex-direction: column;
@@ -122,21 +137,14 @@ nav .menu-items {
   top: 0;
   right: 0;
   transition: transform 0.5s ease-in-out;
-  background-color: pink;
+  background-color: white;
+  opacity: 90%;
 }
 
 nav .menu-items li {
   margin-bottom: 1.2rem;
   font-size: 1.5rem;
   font-weight: 500;
-}
-
-.logo {
-  position: absolute;
-  top: 5px;
-  left: 15px;
-  font-size: 1.2rem;
-  color: #0e2431;
 }
 
 .nav-container input[type="checkbox"]:checked ~ .menu-items {
@@ -157,4 +165,71 @@ nav .menu-items li {
 
 .nav-container input[type="checkbox"]:checked ~ .logo{
   display: none;
+}
+
+#aboutcontact h2 {text-align: center; margin: 1% auto;}
+
+.about {background: rgba(206, 199, 191, 0.25);}
+.about img {max-width: 100%; width: 95%; height: 95%;background-size: contain; object-fit: fill; padding: 2%;}
+
+.contact {padding: 2%;}
+/*https://www.w3schools.com/css/css_form.asp, https://www.w3schools.com/css/tryit.asp?filename=trycss_forms*/
+.contact input[type=text], input[type=email], select, textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: rgba(206, 199, 191, 0.25);
+}
+
+.contact textarea {height: 150px;}
+
+.contact input[type=submit] {
+  width: 25%;
+  background-color: #CEC7BF;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact input[type=submit]:hover {
+  background-color: #aca092;
+}
+
+/* media queries */
+@media (min-width: 400px) {
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(7, 8%);
+}
+
+.IMAGES img {object-fit: contain; padding: 2% 0;}
+.IMAGES {height: auto; overflow: hidden;}
+
+.about {display: inline;}
+.about img {width: 45%; height: 45%; float: left;}
+.about p {margin: 0; padding: 2% 0;}
+
+nav .menu-items {
+  width: 50%;
+  max-width: 400px;
+}
+}
+
+@media (min-width: 780px) {
+.grid-container {
+  display: grid;
+  grid-template-columns: 20% 1fr 1fr 1fr;
+  grid-template-rows: repeat(7, 15%);
+}
+
+.about img {width: 30%; height: 30%;}
+
 }
