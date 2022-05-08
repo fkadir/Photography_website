@@ -196,8 +196,7 @@ nav .menu-items li {
   left: 0;
   top: 0;
   width: 100%; /* Full width */
-  height: 100% /* Full height */
-  overflow: scroll;
+  height: -webkit-fill-available;
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
@@ -231,7 +230,7 @@ nav .menu-items li {
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(10, 120px) 10px;}
+  grid-template-rows: 8.7% 9.15% repeat(2, 14.2%) repeat(4, 6.49%) 7.29% 5.59%;}
 
 .IMAGES img {object-fit: contain; padding: 2% 0;}
 .IMAGES {height: auto; overflow: hidden;}
@@ -250,7 +249,7 @@ nav .menu-items {
 .grid-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(5, 115px);
+  grid-template-rows: 16.37% 26.69% repeat(2, 12.2%) 10.43%;
 }
 
 .about img {width: 30%; height: 30%;}

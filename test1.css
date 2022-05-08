@@ -23,7 +23,10 @@ nav img {width: 10%; height: auto;}
 
 /*https://alvarotrigo.com/blog/hamburger-menu-css/, https://codepen.io/alvarotrigo/pen/wvrzPWL */
 nav {
+  background-color: white;
   width: 100%;
+  position: sticky;
+  top: 0;
 }
 
 .container {
@@ -189,12 +192,11 @@ nav .menu-items li {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+  padding: 9% 0; /* Location of the box */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
+  height: -webkit-fill-available;
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
@@ -228,7 +230,7 @@ nav .menu-items li {
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(9, 135px);}
+  grid-template-rows: 8.7% 9.15% repeat(2, 14.2%) repeat(4, 6.49%) 7.29% 5.59%;}
 
 .IMAGES img {object-fit: contain; padding: 2% 0;}
 .IMAGES {height: auto; overflow: hidden;}
@@ -240,13 +242,14 @@ nav .menu-items li {
 nav .menu-items {
   width: 50%;
   max-width: 400px;}
+
 }
 
-@media (min-width: 750px) {
+@media (min-width: 780px) {
 .grid-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(5, 150px);
+  grid-template-rows: 16.37% 26.69% repeat(2, 12.2%) 10.43%;
 }
 
 .about img {width: 30%; height: 30%;}
