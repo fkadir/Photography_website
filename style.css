@@ -150,6 +150,7 @@ nav .menu-items li {
 .nav-container input[type="checkbox"]:checked ~ .logo{
   display: none;
 }
+/* end of reference*/
 
 /*https://www.w3schools.com/css/css_form.asp, https://www.w3schools.com/css/tryit.asp?filename=trycss_forms*/
 .contact input[type=text], input[type=email], select, textarea {
@@ -187,6 +188,7 @@ nav .menu-items li {
   margin-right: auto;
   margin-left: auto;
 }
+/* end of reference*/
 
 /*https://www.w3schools.com/howto/howto_css_modals.asp, https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal*/
 .modal {
@@ -225,6 +227,7 @@ nav .menu-items li {
   text-decoration: none;
   cursor: pointer;
 }
+/*end of reference*/
 
 /* media queries */
 @media (min-width: 400px) {
@@ -254,9 +257,5 @@ nav .menu-items {
 }
 
 .about img {width: 30%; height: 30%;}
-
-#popup-image {
-  /* */
-}
 
 }
